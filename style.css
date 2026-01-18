@@ -17,3 +17,32 @@ html {
   height: 100vh;
   background-color: #f6f6f6;
 }
+
+.music_container {
+  width: 35rem;
+  height: 55rem;
+  background-color: #fff;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+  box-shadow: 0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.2);
+  padding: 3rem;
+  text-align: center;
+}
+
+.music_container #title {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  word-spacing: 0.5rem;
+  color: #171717;
+  margin: 2rem 0 0.5rem 0;
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+.music_container #artist {
+  color: #cccaca;
+}
