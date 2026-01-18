@@ -18,7 +18,7 @@ const songs = [
     artist: "Muktinath Rajbanshi",
     },
    {
-     name: "mukti-3",
+    name: "mukti-3",
     title: "Labon Ko",
     artist: "Muktinath Rajbanshi",
     },
@@ -54,4 +54,13 @@ play.addEventListener("click", () => {
     isPlaying ? pauseMusic() : playMusic()
 })
 
+// changing the music data 
 
+const loadSong = (songs) => {
+    title.textContent = songs.title;
+    artist.textContent = songs.artist;
+    music.src = "music/"+songs.name+ ".mp3";
+    img.src = "images/"+ songs.name + ".png";
+}
+
+loadSong(songs[3]);
