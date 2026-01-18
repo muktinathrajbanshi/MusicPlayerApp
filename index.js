@@ -1,6 +1,34 @@
 const music = document.querySelector("audio");
 const play = document.getElementById("play");
 const img = document.querySelector("img");
+const artist = document.getElementById("artist");
+const title = document.getElementById("title");
+const prev = document.getElementById("prev");
+const next = document.getElementById("next");
+
+const songs = [
+    {
+    name: "mukti-1",
+    title: "Oh Jane Ja",
+    artist: "Muktinath Rajbanshi",
+    },
+    {
+    name: "mukti-2",
+    title: "Bachke Jara",
+    artist: "Muktinath Rajbanshi",
+    },
+   {
+     name: "mukti-3",
+    title: "Labon Ko",
+    artist: "Muktinath Rajbanshi",
+    },
+    {
+    name: "mukti-4",
+    title: "Qui Raton Ko Main",
+    artist: "Muktinath Rajbanshi",
+    }
+]
+
 
 let isPlaying = false;
 
@@ -22,9 +50,8 @@ const pauseMusic = () => {
 }
 
 play.addEventListener("click", () => {
-    if(isPlaying) {
-        pauseMusic();
-    } else {
-        playMusic();
-    }
+
+    isPlaying ? pauseMusic() : playMusic()
 })
+
+
