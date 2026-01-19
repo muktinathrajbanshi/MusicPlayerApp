@@ -80,4 +80,4 @@ const prevSong = () => {
 
 next.addEventListener("click", nextSong);
 prev.addEventListener("click", prevSong);
-
+loadSong(songs[0]);
