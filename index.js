@@ -6,6 +6,8 @@ const title = document.getElementById("title");
 const prev = document.getElementById("prev");
 const next = document.getElementById("next");
 
+let progress = document.getElementById("progress");
+
 const songs = [
     {
     name: "mukti-1",
@@ -78,6 +80,20 @@ const prevSong = () => {
     playMusic();
 }
 
+// progress js work 
+
+music.addEventListener("timeupdate", (event) => {
+    // console.log(event);
+    const {currentTime, duration} = event.srcElement;
+    console.log(currentTime);
+    console.log(duration);
+    let progress_time = (currentTime / duration) * 100;
+    progress.style.width = `${progress_time}%`;
+       
+});
+
 next.addEventListener("click", nextSong);
 prev.addEventListener("click", prevSong);
 loadSong(songs[0]);
+
+
