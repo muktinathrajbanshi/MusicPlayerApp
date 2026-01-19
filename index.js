@@ -60,7 +60,7 @@ const loadSong = (songs) => {
     title.textContent = songs.title;
     artist.textContent = songs.artist;
     music.src = "music/"+songs.name+ ".mp3";
-    img.src = "images/"+ songs.name + ".png";
+    img.src = "images/"+ songs.name + ".webp";
 }
 
 songIndex = 0;
