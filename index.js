@@ -63,4 +63,14 @@ const loadSong = (songs) => {
     img.src = "images/"+ songs.name + ".png";
 }
 
-loadSong(songs[3]);
+songIndex = 0;
+// loadSong(songs[3]);
+
+const nextSong = () => {
+    songIndex++;
+    loadSong(songs[songIndex])
+}
+
+next.addEventListener("click", nextSong);
+prev.addEventListener("click", prevSong);
+
