@@ -24,7 +24,7 @@ const songs = [
     },
     {
     name: "mukti-4",
-    title: "Qui Raton Ko Main",
+    title: "Qui Raton Ko",
     artist: "Muktinath Rajbanshi",
     }
 ]
@@ -51,7 +51,7 @@ const pauseMusic = () => {
 
 play.addEventListener("click", () => {
 
-    isPlaying ? pauseMusic() : playMusic()
+    isPlaying ? pauseMusic() : playMusic();
 })
 
 // changing the music data 
@@ -67,8 +67,9 @@ songIndex = 0;
 // loadSong(songs[3]);
 
 const nextSong = () => {
-    songIndex++;
-    loadSong(songs[songIndex])
+    songIndex = (songIndex + 1) % songs.length;
+    loadSong(songs[songIndex]);
+    playMusic();
 }
 
 next.addEventListener("click", nextSong);
