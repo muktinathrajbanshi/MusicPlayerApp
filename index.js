@@ -8,8 +8,8 @@ const next = document.getElementById("next");
 
 
 let progress = document.getElementById("progress");
-const duration = document.getElementById("duration");
-const current_time = document.getElementById("current_time");
+let total_duration = document.getElementById("duration");
+let current_time = document.getElementById("current_time");
 
 const songs = [
     {
@@ -93,7 +93,13 @@ music.addEventListener("timeupdate", (event) => {
 
     // music duration update 
     console.log(duration);
+    let min_duration = Math.floor(duration / 60);
+    let sec_duration = Math.floor(duration % 60);
     
+   let tot_duration = `${min_duration}:${sec_duration}`;
+   if(duration) {
+       total_duration.textContent = `${tot_duration}`;
+   }
 
        
 });
