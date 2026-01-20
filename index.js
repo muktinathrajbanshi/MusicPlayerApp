@@ -10,6 +10,7 @@ const next = document.getElementById("next");
 let progress = document.getElementById("progress");
 let total_duration = document.getElementById("duration");
 let current_time = document.getElementById("current_time");
+const progress_div = document.getElementById("progress_div");
 
 const songs = [
     {
@@ -110,6 +111,21 @@ music.addEventListener("timeupdate", (event) => {
     let tot_currentTime = `${min_currentTime}:${sec_currentTime}`;
        current_time.textContent = `${tot_currentTime}`;
 });
+
+// progress onclick functionality 
+
+    progress_div.addEventListener("click", (event) => {
+        console.log(event);
+         const {duration} = music;
+        let move_progress = (event.offsetX / event.srcElement.clientWidth) * duration;
+        console.log(duration);
+        
+        console.log(move_progress);
+    })
+
+// if music end call next song func 
+
+music.addEventListener("ended", nextSong);
 
 next.addEventListener("click", nextSong);
 prev.addEventListener("click", prevSong);
