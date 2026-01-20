@@ -92,16 +92,20 @@ music.addEventListener("timeupdate", (event) => {
     progress.style.width = `${progress_time}%`;
 
     // music duration update 
-    console.log(duration);
     let min_duration = Math.floor(duration / 60);
     let sec_duration = Math.floor(duration % 60);
     
    let tot_duration = `${min_duration}:${sec_duration}`;
    if(duration) {
        total_duration.textContent = `${tot_duration}`;
-   }
-
-       
+   }  
+   
+   // current duration update 
+    let min_currentTime = Math.floor(currentTime / 60);
+    let sec_currentTime = Math.floor(currentTime % 60);
+    
+   let tot_currentTime = `${min_currentTime}:${sec_currentTime}`;
+       current_time.textContent = `${tot_currentTime}`;
 });
 
 next.addEventListener("click", nextSong);
