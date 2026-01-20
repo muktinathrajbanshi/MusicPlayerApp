@@ -104,7 +104,10 @@ music.addEventListener("timeupdate", (event) => {
     let min_currentTime = Math.floor(currentTime / 60);
     let sec_currentTime = Math.floor(currentTime % 60);
     
-   let tot_currentTime = `${min_currentTime}:${sec_currentTime}`;
+    if(sec_currentTime < 10) {
+        sec_currentTime = `0${sec_currentTime}`;
+    }
+    let tot_currentTime = `${min_currentTime}:${sec_currentTime}`;
        current_time.textContent = `${tot_currentTime}`;
 });
 
