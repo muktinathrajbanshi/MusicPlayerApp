@@ -118,9 +118,10 @@ music.addEventListener("timeupdate", (event) => {
         console.log(event);
          const {duration} = music;
         let move_progress = (event.offsetX / event.srcElement.clientWidth) * duration;
-        console.log(duration);
-        
-        console.log(move_progress);
+        // console.log(duration);
+        // console.log(move_progress);
+
+        music.currentTime = move_progress;
     })
 
 // if music end call next song func 
